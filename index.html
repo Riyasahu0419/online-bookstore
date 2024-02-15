@@ -6,7 +6,32 @@
     <title>Document</title>
 </head>
 <body>
+    <h1>online bookstore</h1>
     
 </body>
 </html>
-<script src="index.js"></script>
+<script>
+
+    function Book(title,author,birthYear,nationality,genre,price){
+        this.title=title;
+        this.author=author;
+        this.genre=genre;
+        this.birthYear=birthYear;
+        this.nationality=nationality;
+    }
+
+    Book.prototype.getBOOkInfo=function(){
+        console.log(`Book Title : ${this.title}`)
+        console.log(`Author's name : ${this.author}`)
+         console.log(`genration : ${this.genre}`)
+          console.log(`Book price : ${this.price}`)
+    }
+
+    
+let Book1=new Book("Ramcharitmanas","Tulsidas",1511,"India","epic","520Rs")
+let Book2=new Book("Godan","MunshiPremchandra",1961,"Indian","Fiction","$10")
+
+Book1.getBOOkInfo()
+Book2.getBOOkInfo()
+
+</script>
